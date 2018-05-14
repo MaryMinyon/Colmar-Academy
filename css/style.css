@@ -1,0 +1,507 @@
+html {
+  font-weight: 16px; 
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;   
+}
+
+h2 {
+  padding-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.media-container {
+  overflow: hidden;
+}
+
+.media-container img,
+.media-container video {
+  display: block;
+  width: 100%;
+}
+
+/* Universal Component - Flex Content Container */
+
+.flex-content {
+  display: flex;
+  padding: 0 1.5rem;
+}
+
+.flex-content .main-content {
+  width: 60%;
+  padding: 2rem 1.5rem 2rem 0;
+  border-right: 1px solid #f5f5f5;
+}
+
+.flex-content .supporting-content {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 2rem 0;
+}
+
+/* Universal Component - Content Image Box */
+
+.content-image-box {
+  display: flex;
+  padding: 1rem 0 1rem 1rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.content-image-box .media-container {
+  width: 35%;
+}
+
+.content-image-box .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  padding: 0 0.75rem 0 1rem;
+}
+
+.content-image-box h4 {
+  padding-bottom: .5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.content-image-box p {
+  padding-bottom: .5rem;
+}
+
+.content-image-box .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 895px) {
+  .content-image-box .desktop {
+    display: none;
+  }
+
+  .content-image-box .mobile {
+    display: block;
+  }
+
+  .content-image-box {
+    padding-left: 0;
+    border-bottom: none;
+  }
+
+  .content-image-box .media-container {
+    width: 100%;
+  }
+}
+
+
+  /* Header Section  */
+
+header {
+  padding: 1rem 1.5rem;
+}
+
+header .desktop {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  margin-right: .5rem;
+}
+
+header li {
+  display: inline;
+  padding-right: 1rem;
+}
+
+header li:last-child {
+  padding-right: 0;
+}
+
+header .mobile  {
+  display: none;
+}
+
+header h1 {    
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;    
+  color: dimgrey; 
+  font-size: 2rem;
+}
+
+header  span {
+  font-family: 'Raleway', sans-serif; 
+  font-weight: 400;    
+  color: grey;
+  font-size: 2rem;    
+}
+
+header a {
+  font-size: 1.2rem;
+  color: dimgrey;
+  font-family: font-family: 'Raleway', sans-serif;
+  font-weight: 700;    
+}
+
+header a:hover {
+  background-color: skyblue;
+  border-radius: 1.3rem;
+}
+
+
+/* Mobile */
+@media only screen and (max-with 480px) {
+  
+    header .mobile {
+    display: none;  
+    justify-content: space-around;
+    align-items: center;    
+    }
+    
+   header .mobile li {
+     margin-left: 1rem; 
+     width: auto;   
+    }    
+}
+
+@media only screen and (max-with 480px) {
+  header .desktop {
+    display: none;    
+ }
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+/* Banner Section */
+       
+#banner { 
+  background-color: skyblue;
+  border: 1px solid lightgrey;
+}
+
+#banner img {
+  width: 100%;
+}
+    
+#banner h1 {
+  font-size: 2.75rem; 
+  font-weight: bold;
+  color: dimgray;
+}
+  
+#banner h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.25rem; 
+  color: dimgray;
+  font-style: italic;
+}
+    
+#banner a {
+  border-radius: 1.3rem;
+  background-color: dimgrey;
+  padding: .5rem 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+#banner .supporting-content {
+  justify-content: center;
+  padding-left: 3rem;
+  line-height: 1;
+}
+
+#banner h3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+#banner p {
+  padding-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 770px) {
+  #banner {
+    flex-direction: column;
+    padding: 0;
+  }
+
+#banner .main-content {
+    width: auto;
+    padding: 0;
+  }
+
+  #banner .supporting-content {
+    width: auto;
+    padding: 2rem 1rem;
+  }
+}
+
+    
+#banner h1::first-letter {
+  font-size: 150%;
+  color: dimgrey; 
+  text-decoration: none;
+} 
+
+
+#banner a:hover {
+  background-color: white;
+  color: dimgrey;
+  font-weight: 700;
+} 
+
+/* End of Banner Section */
+
+
+/* Information - 3rd box */
+
+#information-section .main-content h3 {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border: 1px solid lightgrey;
+}
+
+#information-section .supporting-content {
+  justify-content: space-between;
+} 
+
+#information-section p {
+  line-height: 1.4;
+  padding-top: 1rem;
+}
+
+#information-section span {
+  line-height: 1.5;
+  padding-top: 1rem;
+}
+
+@media only screen and (max-width: 895px) {
+  #information-section.flex-content {
+    padding: 0 1rem;
+  }
+
+  #information-section .main-content {
+    display: none;
+  }
+
+  #information-section .supporting-content {
+    width: 100%;
+  }
+
+  #information-section .supporting-content .content-image-box {
+    flex-direction: column;
+  }
+
+  #information-section .text-content {
+    max-width: 14rem;
+    padding: 1rem;
+    border-bottom: .5 solid lightgrey;
+  }
+}
+    
+.media-content .author {
+  font-size: 1rem;
+}
+  
+/* End of Information Section */
+ 
+    
+/* Courses Section */    
+ 
+.courses-section {
+  padding: 2rem 1rem;
+  background-color: skyblue;
+  border: 1px solid lightgrey;
+}
+
+.courses-row {
+  display: flex;
+}
+
+.course {
+  flex-basis: 30%;
+  margin: 1.5rem;
+  background-color: white;
+  color: #2b2b2b;
+}
+
+.course .text-content {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.course h3,
+.course h4 {
+  padding-bottom: .5rem;
+}
+
+@media only screen and (max-width: 770px) {
+  #courses-section {
+    padding: 2rem 1rem;
+    background-color: inherit;
+  }
+
+  .courses-row {
+    flex-direction: column;
+  }
+
+  .course {
+    margin: .25rem 0;
+  }
+
+  .course .text-content {
+    background-color: #d8d8d8;
+  }
+
+  .course h3 {
+    padding-bottom: 0;
+  }
+
+  .course .media-container,
+  .course h4,
+  .course p {
+    display: none;
+  }
+}
+    
+}  /* End of Learning Section */
+        
+
+/* Thesis Section */
+#thesis-section {
+  padding: 1.4rem 0;
+  background-color: white;
+  border: 1px solid lightgrey;
+}
+
+#thesis-section h2 {
+  padding-top: 1rem;
+}
+
+#thesis-section .main-content {
+  padding-bottom: 1rem;
+}
+
+#thesis-section h3 p {
+  padding: 1rem 0;
+  line-height: 1.4;
+}
+
+#thesis-section h3 {
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+#thesis-section p {
+  line-height: 1;
+}
+
+@media only screen and (max-width: 895px) {
+  #thesis-section .main-content h3,
+  #thesis-section .main-content p,
+  #thesis-section .supporting-content {
+    display: none;
+  }
+
+  #thesis-section {
+    padding-bottom: 1.5rem;
+  }
+
+  #thesis-section .flex-content {
+    padding: 0;
+  }
+
+  #thesis-section .main-content {
+    width: 100%;
+    padding: 0;
+    margin-right: 0;
+  }
+}
+
+/* End of Thesis Section */
+
+footer {
+  display: flex;
+  padding: 2rem 1.5rem;
+  font-size: .75rem;
+  background-color: skyblue;
+  color: dimgrey;
+  border: 1px solid #d8d8d8;
+}
+
+footer .copyright {
+  flex-grow: 1;
+}
+
+footer a {
+  margin-right: .75rem;
+}
+
+footer a:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  footer a {
+    display: none;
+  }
+}
+   
